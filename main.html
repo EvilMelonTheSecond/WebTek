@@ -1,47 +1,74 @@
 <!DOCTYPE html>
-<head>
-<title>Ana Sayfa</title>
 <html lang="en">
-<meta charset="UTF-8">
-<meta name="description" content="Web Teknolojileri Proje">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="author" content="Bartu MERKAN">
-<link rel="stylesheet" href="">
-<style>
-html,body {font-family:"Verdana",sans-serif}
-h1,h2,h3,h4,h5,h6 {background-color:MediumSeaGreen; font-family:"Segoe UI",sans-serif}
-nav {
-  position: absolute;
-  left: -80px;
-  transition: 0.3s;
-  padding: 15px;
-  width: 100px;
-  text-decoration: none;
-  font-size: 20px;
-  color: white;
-  border-radius: 0 5px 5px 0;
-}
-</style>
+<head>
+    <title>Ana Sayfa</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Teknolojileri Proje">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Bartu MERKAN">
+    <link rel="stylesheet" href="">
+    <style>
+    html, body {
+        font-family:"Verdana",sans-serif
+    }
+    h1,h2,h3,h4,h5,h6 {
+        background-color:MediumSeaGreen;
+        font-family:"Segoe UI",sans-serif
+    }
+    #nav-container {
+        width: 15%;
+        height: 300px;
+        position: absolute;
+        top: 0;
+        left: -15%;
+        transition: left 0.3s;
+    }
+    #nav-container:hover {
+        left: 0;
+    }
+    nav {
+        float: left;
+        width: 100%;
+        height: 50%;
+        background: #ccc;
+        padding: 0px;
+    }
+    #menu-icon {
+        position: absolute;
+        right: -40px;
+        top: 0;
+        padding: 15px;
+        background-color: rgb(116, 60, 179);
+        color: white;
+        cursor: pointer;
+    }
+    .content {
+        padding-left: calc(30px);
+    }
+    </style>
 </head>
-<script src=""></script>
+<body>
 
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-    </main>
-    <nav>
-      <ul>
-        <li><a href="#">Özgeçmiş</a></li>
-        <li><a href="sehrim.html">Şehrim</a></li>
-        <li><a href="#">Mirasımız</a></li>
-        <li><a href="#">İlgi alanlarım</a></li>
-      </ul>
-	</nav>
-	<script src="index.js"></script>
-    <div class="">
-		<h1>This is a Heading</h1>
-		<p>This is a paragraph.</p>
-		<p>This is another paragraph.</p>
-	</div>
-  </body>
+    <div id="nav-container">
+        <div id="menu-icon">
+            &#9776;
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Özgeçmiş</a></li>
+                <li><a href="sehrim.html">Şehrim</a></li>
+                <li><a href="#">Mirasımız</a></li>
+                <li><a href="#">İlgi alanlarım</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <main>
+            <h1>Welcome to My Website</h1>  
+        </main>
+        <h1>This is a Heading</h1>
+        <p>This is a paragraph.</p>
+        <p>This is another paragraph.</p>
+    </div>
+</body>
 </html>
