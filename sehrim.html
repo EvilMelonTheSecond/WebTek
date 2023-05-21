@@ -10,33 +10,112 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com
 /bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
-<script src=""></script>
 
 <body>
-
-    <div id="nav-container">
-        <div id="menu-icon">
-            &#9776;
-        </div>
-        <nav>
-            <ul>
-                <li><a href="main.html">Ana Sayfa</a></li>
-                <li><a href="ozgecmis.html">Özgeçmiş</a></li>
-                <li>Şehrim</li>
-                <li><a href="#">Mirasımız</a></li>
-                <li><a href="#">İlgi alanlarım</a></li>
-            </ul>
-        </nav>
+<div id="nav-container">
+    <div id="menu-icon">
+        &#9776;
     </div>
-    <div class="content">
-        <h1>Şehir Bilgi Sayfası</h1>  
-		<h2>This is a Heading</h2>
-		<p>This is a paragraph.</p>
-		<p>Şehrim şeklinde bir sayfa olmalı, bu sayfada memletinize ya da sevdiğiniz şehre ait bilgiler yer 
-            almalıdır. (Şehrin nufusu, gezilecek yerler vb) Sayfanın başında ya da sonunda en az 4 resimden 
-            oluşan bir slider yer almalıdır. Slider’da yer alan resimlere tıklandığında ilgili resimlere ait içeriklere 
-            link olmalıdır.(İçerikler ayrıntılı olmadan site içersinde yer almalı)            
-        </p>
-	</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="ozgecmis.html">Özgeçmiş</a></li>
+            <li>Şehrim</li>
+            <li><a href="miras.html">Mirasımız</a></li>
+            <li><a href="ilgi.html">İlgi alanlarım</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li><a href="Login.php">Login</a></li>
+        </ul>
+    </nav>
+</div>
+
+<h1>Şehir Bilgi Sayfası</h1> 
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+    <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <a href="miras.html#ozet"><img src="City1.jpg" style="width:100%"></a>
+        <div class="text">Kuş bakışı liman</div>
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <a href="miras.html#ozet"><img src="City2.jpg" style="width:100%"></a>
+        <div class="text">Dağ hattı</div>
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <a href="miras.html#Alemdar"><img src="Alemdar.jpg" style="width:100%"></a>
+        <div class="text">Alemdar gemisi</div>
+    </div>
+    <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <a href="miras.html#cave"><img src="Caves.jpg" style="width:100%"></a>
+        <div class="text">Cehennem Ağzı Mağaraları</div>
+    </div>
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+<!-- The dots/circles -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+</div> 
+
+
+
+<div class="content"> 
+    <h2>Tanıtım</h2>
+    <p>Karadeniz Ereğli, Zonguldak il sınırları içinde bulunan bir ilçedir. Türkiye’nin kuzeyinde, 
+        Karadeniz Bölgesi'nin Batı Karadeniz Bölümü'nde yer almaktadır. Yüzölçümü 782 km²dir. İlçeye bağlı 3 belde (Gülüç, Kandilli (Armutçuk) ve Ormanlı) ve 93 köy vardır.
+        Ereğli nüfusu 2022 yılına göre 175.309dir.</p>
+    <p>Kent merkezi; sosyal alanlar, çevre düzenlemeleri ve ticari hareketliliğinden dolayı Zonguldak ve çevresinin çekim merkezi konumundadır. 
+        Bu nedenle gündüz saatlerinde Karadeniz Ereğli'nin nüfusu 200.000'i, araç sayısı da 60.000'i geçer.</p>
+    <p>Karadeniz Ereğli, sınırları boyunca 80 kilometrelik kıyı şeridine sahiptir. 
+        Yükleme ve boşaltma olanağı olan Türkiye'nin en büyük limanları ve balıkçı barınakları ile uluslararası nitelikte tersaneleri bulunmaktadır. 
+        İlçeye bağlı Kandilli (2003'ten önceki adı Armutçuk) beldesinde, Türkiye Taşkömürü Kurumu'na bağlı Armutçuk Müessesesi bünyesinde taşkömürü ocakları, 
+        ilçe merkezinde Ereğli Demir ve Çelik Fabrikaları (Erdemir) bulunmaktadır. Sadece Ereğli Demir ve Çelik Fabrikaları'nda 10.000'e yakın işçi çalışmaktadır.</p>
+    <p>Çoğunluğu dağlık olan şehrin en yoğun turizm ve gezi alanı sahil çizgisindedir. Liman manzarası olan birçok restoranın yanında birkaç tarihi yer bulunmaktadır.</p>
+    <p>İlçenin kıyıları boyunca, birçok doğal plajın yanı sıra; Karadeniz Ereğli Belediyesi, Erdemir Fabrikaları ve Karadeniz Bölge Komutanlığı’na ait kamp ve plaj tesisleri bulunmaktadır.</p>
+    <p>Karadeniz Ereğli’de her yıl 18 Haziran'da Osmanlı Çileği Kültür ve Sanat Festivali düzenlenmektedir. 
+        Sonradan kaldırılmış olan Hamsi Festivali kapsamında 22 Aralık 2002 tarihinde 2.002 metre uzunluğunda “Dünya’nın En Uzun Mangalı” rekoru kırılmaya çalışılmış, 
+        1.600 metrenin kabul edilmesi sonucu ilçe Guinness Rekorlar Kitabı'na adını yazdırmıştır. 
+        Türkiye'nin En Büyük Festivali olan Sevgi Barış Dostluk Festivali her yıl Temmuz Aylarında yapılıp yüzbinlerce kişiye ev sahipliği yapar.</p>
+    <p>Ereğli eskiden Heraklia adıyla anılırdı. Eski Yunan mitolojisine göre tanrı Zeus'un oğlu Herkül üç başlı köpek olan Kerberos ile şu an ilçe merkezinde bulunan Cehennemağzı Mağarası'nda savaşmıştır.</p>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
 </body>
 </html>
