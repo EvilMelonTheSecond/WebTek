@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>İlgi Alanlarım</title>
+    <link href="StyleSheet.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="description" content="Web Teknolojileri Proje">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="Bartu MERKAN">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com
+/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div id="nav-container">
+        <div id="menu-icon">
+            &#9776;
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="ozgecmis.html">Özgeçmiş</a></li>
+                <li><a href="sehrim.html">Şehrim</a></li>
+                <li><a href="miras.html">Mirasımız</a></li>
+                <li>İlgi alanlarım</li>
+                <li><a href="iletisim.html">İletişim</a></li>
+                <li><a href="Login.php">Login</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+        <h1>İlgi Alanlarım</h1>  
+        <h2>This is a Heading</h2>
+        <p>This is a paragraph.</p>
+        
+        <div id="gameContainer">
+            <!-- Game info will be inserted here -->
+        </div>
+        <button id="nextButton">Next Game</button>
+
+        <script>
+            let gameIndex = 0;
+            let games = [];
+            function fetchGames() {
+                fetch("https://rawg-video-games-database.p.rapidapi.com/genres", {
+                    "method": "GET",
+                    "headers": {
+                        "x-rapidapi-key": "your-rapidapi-key",
+                        "x-rapidapi-host": "rawg-video-games-database.p.rapidapi.com"
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    games = data.results;
+                    displayGame();
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+            }
+
+            function displayGame() {
+                const gameContainer = document.getElementById("gameContainer");
+                const game = games[gameIndex];
+                
+                gameContainer.innerHTML = `
+                    <h2>${game.name}</h2>
+                    <img src="${game.background_image}" alt="${game.name}" />
+                    <p>${game.description}</p>
+                `;
+            }
+
+            document.getElementById("nextButton").addEventListener("click", () => {
+                gameIndex = (gameIndex + 1) % games.length; // Cycle through games
+                displayGame();
+            });
+
+            // Fetch games on initial load
+            fetchGames();
+        </script>
+    </div>
+</body>
+</html>
